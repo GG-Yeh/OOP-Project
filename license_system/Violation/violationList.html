@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violation List</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="buttonInit.js"></script>
+</head>
+<body>
+
+    <script src="navInit.js"></script>
+
+    <div class="p-5 text-left border-bottom">
+        <h1>違規列表</h1>
+        <div class="col-lg">
+            <p class="lead m-1">
+                顯示所有違規資料: 違規者ID、違規種類、日期、罰鍰、是否支付
+            </p>
+        </div>
+    </div>
+
+    <div class="container p-4 text-center">
+        <script>
+            addViolationButton()
+            updateViolationButton()
+            deleteViolationButton()
+        </script>
+    </div>
+
+    <div class="container py-2">
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-warning col-2">User ID</li>
+            <li class="list-group-item list-group-item-warning col-3">Violation Type</li>
+            <li class="list-group-item list-group-item-warning col-3">Violation Date</li>
+            <li class="list-group-item list-group-item-warning col-2">Fine Amount</li>
+            <li class="list-group-item list-group-item-warning col-2">Payment Status</li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item col-2">1</li>
+            <li class="list-group-item col-3">Speeding</li>
+            <li class="list-group-item col-3">2024-12-25</li>
+            <li class="list-group-item col-2">100</li>
+            <li class="list-group-item col-2">Unpaid</li>
+        </ul>
+    </div>
+
+    
+    <div class="container p-4 text-center">
+        <script>
+            addViolationButton()
+            updateViolationButton()
+            deleteViolationButton()
+        </script>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>    

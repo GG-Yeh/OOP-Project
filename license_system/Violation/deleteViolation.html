@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Violation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    
+    <!-- 頁首的黑條，可以加入多個連結 -->
+    <script src="navInit.js"></script>
+
+    
+    <div class="p-5 text-left border-bottom">
+        <h1>刪除違規</h1>
+        <div class="col-lg">
+            <p class="lead m-1">
+                刪除違規紀錄
+            </p>
+        </div>
+    </div>
+
+    <div class="container py-5 text-center">
+        <div class="row py-2 justify-content-start">
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="inputGroupSelect01">Select Violation ID</label>
+                <select class="form-select" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+        </div>
+        <div class="row py-2">
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="User ID" aria-label="User ID" value="1" disabled>
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Violation Type" aria-label="Violation Type" value="Speeding" disabled>
+            </div>
+        </div>
+        <div class="row py-2">
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">YYYY-MM-DD</span>
+                <input type="text" class="form-control" placeholder="Violation Date" aria-label="Violation Date" aria-describedby="basic-addon1" value="2024-12-25" disabled>
+            </div>
+        </div>
+        <div class="row py-2">
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Fine Amount" aria-label="Fine Amount" value="100" disabled>
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Payment Status" aria-label="Payment Status" value="Unpaid" disabled>
+            </div>
+        </div>
+        
+        <a class="btn btn-danger" href="#" role="button">Delete Violation</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

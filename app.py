@@ -13,6 +13,21 @@ CORS(app)  # 允許所有來源的跨來源請求
 # 定義外部 API 的基礎 URL
 BASE_URL = os.getenv("API_BASE_URL")  # 從 .env 檔案中讀取
 
+# 根路徑，返回 index.html
+@app.route('/', methods=['GET', 'HEAD'])
+def serve_index():
+    if request.method == 'HEAD':
+        return '', 200  # HEAD 請求只需要返回標頭即可
+    return send_from_directory('static', 'index.html')  # 假設 index.html 位於 static 文件夾
+
+# 提供靜態文件
+@app.route('/<path:filename>', methods=['GET'])
+def serve_static(filename):
+    try:
+        return send_from_directory('static', filename)  # 從 static 文件夾提供文件
+    except FileNotFoundError:
+        return jsonify({"error": f"File {filename} not found"}), 404
+
 @app.route('/api/users', methods=['GET'])
 def get_all_users():
     try:

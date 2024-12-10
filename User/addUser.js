@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Send data to the backend
-            fetch('http://127.0.0.1:10000/api/users', {
+            fetch('https://oop-project-w9ul.onrender.com/api/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

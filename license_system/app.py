@@ -1,4 +1,3 @@
-'''
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import requests
@@ -13,7 +12,7 @@ CORS(app)  # 允許所有來源的跨來源請求
 
 # 定義外部 API 的基礎 URL
 BASE_URL = os.getenv("API_BASE_URL")  # 從 .env 檔案中讀取
-
+'''
 @app.route('/api/users', methods=['GET'])
 def get_all_users():
     try:
@@ -78,10 +77,6 @@ if __name__ == '__main__':
     port = int(os.getenv("PORT", 10000))  # 預設埠號為 10000
     app.run(debug=True, host='0.0.0.0', port=port)
 '''
-from flask import Flask
-
-app = Flask(__name__)
-
 @app.route('/')
 def home():
     return "Hello, World!", 200

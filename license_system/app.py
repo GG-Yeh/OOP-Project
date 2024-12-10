@@ -13,6 +13,12 @@ CORS(app)  # 允許所有來源的跨來源請求
 # 定義外部 API 的基礎 URL
 BASE_URL = os.getenv("API_BASE_URL")  # 從 .env 檔案中讀取
 
+@app.route('/', methods=['GET', 'HEAD'])
+def root():
+    if request.method == 'HEAD':
+        return '', 200  # HEAD 請求只需要返回標頭即可
+    return "Welcome to the API!", 200
+
 @app.route('/api/users', methods=['GET'])
 def get_all_users():
     try:

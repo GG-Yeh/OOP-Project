@@ -1,5 +1,5 @@
 function listUserButton() {
-    document.write(`<a class="btn btn-dark m-1" href="license_system/User/userList.html" role="button">List</a>`)
+    document.write(`<a class="btn btn-dark m-1" href="/OOP-project/license_system/User/userList.html" role="button">List</a>`)
 }
 
 function addUserButton() {

@@ -12,7 +12,7 @@ CORS(app)  # 允許所有來源的跨來源請求
 
 # 定義外部 API 的基礎 URL
 BASE_URL = os.getenv("API_BASE_URL")  # 從 .env 檔案中讀取
-'''
+
 @app.route('/api/users', methods=['GET'])
 def get_all_users():
     try:
@@ -72,14 +72,6 @@ def delete_user(user_id: str):
         return jsonify({"error": str(http_err)}), response.status_code
     except Exception as err:
         return jsonify({"error": str(err)}), 500
-
-if __name__ == '__main__':
-    port = int(os.getenv("PORT", 10000))  # 預設埠號為 10000
-    app.run(debug=True, host='0.0.0.0', port=port)
-'''
-@app.route('/')
-def home():
-    return "Hello, World!", 200
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=10000)

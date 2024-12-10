@@ -18,7 +18,7 @@ BASE_URL = os.getenv("API_BASE_URL")  # 從 .env 檔案中讀取
 def serve_index():
     if request.method == 'HEAD':
         return '', 200  # HEAD 請求只需要返回標頭即可
-    return send_from_directory('static', 'index.html')  # 假設 index.html 位於 static 文件夾
+    return send_from_directory('.', 'index.html')  # 假設 index.html 位於 static 文件夾
 
 @app.route('/api/users', methods=['GET'])
 def get_all_users():

@@ -14,11 +14,15 @@ CORS(app)  # 允許所有來源的跨來源請求
 BASE_URL = os.getenv("API_BASE_URL")  # 從 .env 檔案中讀取
 
 @app.route('/', methods=['GET', 'HEAD'])
-def serve_index():
+def init():
     if request.method == 'HEAD':
         return '', 200  # HEAD 請求只需要返回標頭即可
     # 返回 index.html 文件
     return send_from_directory('.', 'index.html')
+
+@app.route('<string:path>', methods=['GET'])
+def init(path: str):
+    return send_from_directory('.', path)
 
 @app.route('/api/users', methods=['GET'])
 def get_all_users():

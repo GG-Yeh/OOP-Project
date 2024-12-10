@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
  * Fetch users from the backend API
  */
 function fetchUsers() {
-    fetch('http://127.0.0.1:10000/api/users')  // Adjust the URL if the backend is hosted elsewhere
+    fetch('https://oop-project-w9ul.onrender.com/api/users')  // Adjust the URL if the backend is hosted elsewhere
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');

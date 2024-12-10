@@ -1,7 +1,7 @@
 document.write(`
     <nav class="navbar bg-dark navbar-dark p-3 navbar-expand-sm">
         <div class="container">
-            <a href="index.html" class="navbar-brand">License System</a>
+            <a href="/index.html" class="navbar-brand">License System</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +12,7 @@ document.write(`
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nv-item">
-                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="/index.html" class="nav-link">Home</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -22,13 +22,13 @@ document.write(`
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="userNavbarDropdown">
-                            <li><a class="dropdown-item" href="userList.html">User List</a></li>
+                            <li><a class="dropdown-item" href="/User/userList.html">User List</a></li>
                             <li> 
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="addUser.html">Add User</a></li>
-                            <li><a class="dropdown-item" href="updateUser.html">Update User</a></li>
-                            <li><a class="dropdown-item" href="deleteUser.html">Delete User</a></li>
+                            <li><a class="dropdown-item" href="/User/addUser.html">Add User</a></li>
+                            <li><a class="dropdown-item" href="/User/updateUser.html">Update User</a></li>
+                            <li><a class="dropdown-item" href="/User/deleteUser.html">Delete User</a></li>
                         </ul>
                     </li>
 
@@ -39,13 +39,13 @@ document.write(`
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="vioNavbarDropdown">
-                            <li><a class="dropdown-item" href="violationList.html">Violation List</a></li>
+                            <li><a class="dropdown-item" href="/User/violationList.html">Violation List</a></li>
                             <li> 
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="addViolation.html">Add Violation</a></li>
-                            <li><a class="dropdown-item" href="updateViolation.html">Update Violation</a></li>
-                            <li><a class="dropdown-item" href="deleteViolation.html">Delete Violation</a></li>
+                            <li><a class="dropdown-item" href="/User/addViolation.html">Add Violation</a></li>
+                            <li><a class="dropdown-item" href="/User/updateViolation.html">Update Violation</a></li>
+                            <li><a class="dropdown-item" href="/User/deleteViolation.html">Delete Violation</a></li>
                         </ul>
                     </li>
                 </ul>

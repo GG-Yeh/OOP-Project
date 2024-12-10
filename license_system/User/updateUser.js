@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiBaseUrl = 'http://127.0.0.1:5000/api/users';
+    const apiBaseUrl = 'http://127.0.0.1:10000/api/users';
     const userIdInput = document.getElementById('userIdInput');
     const userIdDropdown = document.getElementById('userIdDropdown');
     const updateUserBtn = document.getElementById('updateUserBtn');

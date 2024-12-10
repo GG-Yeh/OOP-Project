@@ -74,5 +74,5 @@ def delete_user(user_id: str):
         return jsonify({"error": str(err)}), 500
 
 if __name__ == '__main__':
-    port = int(os.getenv("PORT", 5000))  # 預設埠號為 5000
+    port = int(os.getenv("PORT", 10000))  # 預設埠號為 5000
     app.run(debug=True, host='0.0.0.0', port=port)

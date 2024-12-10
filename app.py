@@ -28,6 +28,10 @@ def serve_static(filename):
     except FileNotFoundError:
         return jsonify({"error": f"File {filename} not found"}), 404
 
+@app.route('/User/<path:filename>')
+def serve_user_files(filename):
+    return send_from_directory('static/User', filename)
+
 @app.route('/api/users', methods=['GET'])
 def get_all_users():
     try:

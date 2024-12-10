@@ -20,6 +20,16 @@ def serve_index():
         return '', 200  # HEAD 請求只需要返回標頭即可
     return send_from_directory('.', 'index.html')  # 假設 index.html 位於 static 文件夾
 
+# 提供根目錄的靜態文件，如 navInit.js 和 buttonInit.js
+@app.route('/<path:filename>', methods=['GET'])
+def serve_root_files(filename):
+    return send_from_directory('.', filename)
+
+# 提供 User 目錄內的文件
+@app.route('/User/<path:filename>', methods=['GET'])
+def serve_user_files(filename):
+    return send_from_directory('User', filename)
+
 @app.route('/api/users', methods=['GET'])
 def get_all_users():
     try:
